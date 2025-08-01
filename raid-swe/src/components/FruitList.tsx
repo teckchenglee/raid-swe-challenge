@@ -5,7 +5,7 @@ interface FruitListProps {
 	onAddToCart: (fruit: Fruit) => void;
 }
 
-export function FruitList({ onAddToCart } :FruitListProps) {
+export function FruitList({ fruits, onAddToCart } :FruitListProps) {
 	return (
 		<div>
 			<h2>Available Fruits</h2>

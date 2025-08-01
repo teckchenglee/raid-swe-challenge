@@ -13,7 +13,10 @@ function App() {
 	const [fruits, setFruits] = React.useState<Fruit[]>(initialFruits);
 
 	const addToCart = (fruit: Fruit) => {
-		const stockItem = initialFruits.find(item => item.id === fruit.id);
+		console.log('Adding to cart:', fruit.name);
+		
+		const stockItem = fruits.find(item => item.id === fruit.id);
+		console.log('Stock before adding:', stockItem?.stock);
 		if (!stockItem || stockItem.stock <= 0) {
 			alert(`Sorry, ${fruit.name} is out of stock!`);
 			return;
