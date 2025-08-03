@@ -63,7 +63,7 @@ function App() {
 				{fruits.map(fruit => (
 					<li key={fruit.id}>
 						{fruit.name} - ${fruit.price.toFixed(2)}{' '}
-						(Stock: {fruit.stock}){' '}<button onClick={() => addToCart(fruit)} disabled={fruit.stock===0}>Add to Cart</button>
+						(Stock: {fruit.stock}){' '}<button onClick={() => addToCart(fruit)} disabled={fruit.stock === 0}>Add to Cart</button>
 					</li>
 				))}
 			</ul>
